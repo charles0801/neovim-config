@@ -158,6 +158,7 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
+
   },
   s = {
     name = "Search",
@@ -181,6 +182,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  n = {
+    name = "VSCode-like navigation",
+    d = { "<cmd>Lspsaga goto_definition<cr>", "Jump to Definition"},
+    t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek Type Definition"},
+    p = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition"},
+    f = { "<cmd>Lspsaga hover_doc ++keep<cr>", "Hover Hint"},
+  }
 }
 
 which_key.setup(setup)
