@@ -105,16 +105,18 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        copilot = "[Copilot]"
       })[entry.source.name]
       return vim_item
     end,
   },
   sources = {
+    { name = "copilot", group_index = 2 },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
-    { name = "nvim_lsp_signature_help" }
+    { name = "nvim_lsp_signature_help" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -130,3 +132,4 @@ cmp.setup {
     native_menu = false,
   },
 }
+
