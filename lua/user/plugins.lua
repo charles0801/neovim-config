@@ -93,6 +93,8 @@ return packer.startup(function(use)
   use { "nvimdev/lspsaga.nvim",
       after = 'nvim-lspconfig'
       }
+  use({'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" }})
+
   
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim" }
@@ -104,6 +106,17 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim" }
+
+  -- Markdown Preview
+  
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+  use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
