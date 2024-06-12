@@ -2,16 +2,21 @@ local servers = {
 	"lua_ls",
 	-- "cssls",
 	-- "html",
-	-- "tsserver",
+	"tsserver",
+  -- python
 	"pyright",
+  "pylsp",
 	-- "bashls",
   -- "metals",
+  "docker_compose_language_server",
+  "cfn-lint",
 	"jsonls",
 	"yamlls",
   "tsserver",
   -- "ruby_ls"
   "solargraph",
-  "perlnavigator"
+  "perlnavigator",
+  "vimls"
 }
 
 local settings = {

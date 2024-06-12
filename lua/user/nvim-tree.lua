@@ -14,7 +14,11 @@ nvim_tree.setup({
    update_focused_file = {
      enable = true,
      update_cwd = true,
+   },
+   filters = {
+     dotfiles = false
    }
+
  }
 )
 -- local status_ok, nvim_tree = pcall(require, "nvim-tree")

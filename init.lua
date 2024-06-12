@@ -1,33 +1,36 @@
 if vim.g.vscode then
-  require "user.options"
-  require "user.keymaps"
+	require("user.options")
+	require("user.keymaps")
 else
-  require "user.options"
-  require "user.keymaps"
-  require "user.plugins"
-  require "user.colorscheme"
-  require "user.cmp"
-  require "user.telescope"
-  require "user.gitsigns"
-  require "user.treesitter"
-  require "user.autopairs"
-  require "user.comment"
-  require "user.nvim-tree"
-  require "user.bufferline"
-  require "user.lualine"
-  require "user.toggleterm"
-  require "user.project"
-  require "user.impatient"
-  require "user.indentline"
-  require "user.alpha"
-  require "user.usercommands"
-  require "user.whichkey"
-  require "user.autocommands"
-  require "user.metals"
-  require "user.lsp"
-  require "user.lspsaga"
-  require "user.focus"
-  require "user.copilot"
-  require "user.noice"
---  require "user.fidget"
+	require("user.options")
+	require("user.keymaps")
+	-- require "user.plugins"
+	require("user.lazy")
+	require("user.colorscheme")
+	require("user.lsp")
+	-- require("user.lspsaga")
+	require("user.autopairs")
+	require("user.cmp")
+	require("user.telescope")
+	require("user.gitsigns")
+	require("user.autopairs")
+	require("user.comment")
+	require("user.nvim-tree")
+	require("user.bufferline")
+	require("user.lualine")
+	require("user.toggleterm")
+	require("user.project")
+	require("user.impatient")
+	require("user.indentline")
+	require("user.alpha")
+	require("user.usercommands")
+	require("user.whichkey")
+	require("user.autocommands")
+	require("user.metals")
+	require("user.treesitter")
+	require("user.focus")
+	require("user.copilot")
+  require("user.copilot-chat")
+	require("user.noice")
+	require("user.fidget")
 end

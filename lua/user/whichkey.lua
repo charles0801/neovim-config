@@ -97,18 +97,18 @@ local mappings = {
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   c = {
-    name = "Copy",
-    r = "<cmd>Cppath<CR>", "relative path"
+    name = "Copilot",
+    c = { "<cmd>CopilotChat<cr>", "Copilot Chat" },
   },
 
-  p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
-  },
+--  p = {
+--    name = "Packer",
+--    c = { "<cmd>PackerCompile<cr>", "Compile" },
+--    i = { "<cmd>PackerInstall<cr>", "Install" },
+--    s = { "<cmd>PackerSync<cr>", "Sync" },
+--    S = { "<cmd>PackerStatus<cr>", "Status" },
+--    u = { "<cmd>PackerUpdate<cr>", "Update" },
+--  },
 
   g = {
     name = "Git",
