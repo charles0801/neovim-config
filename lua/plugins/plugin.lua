@@ -70,7 +70,7 @@ return {
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim" },
-  { "LinArcX/telescope-env.nvim" },
+	{ "LinArcX/telescope-env.nvim" },
 	-- Treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -109,4 +109,24 @@ return {
 		},
 	},
 	{ "j-hui/fidget.nvim" },
+
+	-- tmux navigator
+	{
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+		},
+		keys = {
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+		},
+	},
+  {"chentoast/marks.nvim"}
 }

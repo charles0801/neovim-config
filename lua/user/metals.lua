@@ -43,6 +43,7 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
   keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  keymap(bufnr, "v", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
@@ -66,7 +67,7 @@ api.nvim_create_autocmd("FileType", {
   -- something like nvim-jdtls which also works on a java filetype autocmd.
   pattern = { "scala", "sbt", "java" },
   callback = function()
-    require("metals").initialize_or_attach(metals_config)
+    metals.initialize_or_attach(metals_config)
   end,
   group = nvim_metals_group,
 })
