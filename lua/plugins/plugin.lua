@@ -66,7 +66,7 @@ return {
 	{ "nvimtools/none-ls.nvim" }, -- for formatters and linters
 	{ "RRethy/vim-illuminate" },
 	{ "nvimdev/lspsaga.nvim", after = "nvim-lspconfig" },
-	{ "scalameta/nvim-metals", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "scalameta/nvim-metals", dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } },
 
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim" },
@@ -128,5 +128,5 @@ return {
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
-  {"chentoast/marks.nvim"}
+	{ "chentoast/marks.nvim" },
 }

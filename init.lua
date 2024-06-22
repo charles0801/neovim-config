@@ -7,7 +7,9 @@ else
 	-- require "user.plugins"
 	require("user.lazy")
 	require("user.colorscheme")
+	require("user.noice")
 	require("user.lsp")
+	require("user.dap")
 	-- require("user.lspsaga")
 	require("user.autopairs")
 	require("user.cmp")
@@ -31,6 +33,5 @@ else
 	require("user.focus")
 	require("user.copilot")
   require("user.copilot-chat")
-	require("user.noice")
 	require("user.fidget")
 end

@@ -7,15 +7,13 @@ local servers = {
 	"pyright",
   "pylsp",
 	-- "bashls",
-  -- "metals",
-  "docker_compose_language_server",
-  "cfn-lint",
 	"jsonls",
 	"yamlls",
   "tsserver",
   -- "ruby_ls"
   "solargraph",
-  "perlnavigator",
+  "kotlin_language_server",
+  -- "perlnavigator",
   "vimls"
 }
 

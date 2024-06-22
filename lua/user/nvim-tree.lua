@@ -17,6 +17,9 @@ nvim_tree.setup({
    },
    filters = {
      dotfiles = false
+   },
+   view = {
+     adaptive_size = true
    }
 
  }
