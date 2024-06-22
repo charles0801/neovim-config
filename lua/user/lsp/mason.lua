@@ -5,7 +5,7 @@ local servers = {
 	-- "tsserver",
 	"pyright",
 	-- "bashls",
-  "metals",
+  -- "metals",
 	"jsonls",
 	"yamlls",
   "tsserver",
