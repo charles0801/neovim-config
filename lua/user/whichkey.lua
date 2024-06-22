@@ -183,11 +183,11 @@ local mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
   n = {
-    name = "VSCode-like navigation",
+    name = "Navigation",
     d = { "<cmd>Lspsaga goto_definition<cr>", "Jump to Definition"},
     t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek Type Definition"},
     p = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition"},
-    f = { "<cmd>Lspsaga hover_doc ++keep<cr>", "Hover Hint"},
+    f = { "<cmd>Lspsaga finder<cr>", "Finder"},
   }
 }
 

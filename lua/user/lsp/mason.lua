@@ -8,7 +8,9 @@ local servers = {
   "metals",
 	"jsonls",
 	"yamlls",
-  "tsserver"
+  "tsserver",
+  -- "ruby_ls"
+  "solargraph"
 }
 
 local settings = {
