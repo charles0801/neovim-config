@@ -95,7 +95,7 @@ return packer.startup(function(use)
 	use { "neovim/nvim-lspconfig" } -- enable LSP
   use { "williamboman/mason.nvim"} -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim" }
-	use { "nvimtools/null-ls.nvim" } -- for formatters and linters
+	use { "nvimtools/none-ls.nvim" } -- for formatters and linters
   use { "RRethy/vim-illuminate" }
   use { "nvimdev/lspsaga.nvim",
       after = 'nvim-lspconfig'
@@ -127,7 +127,20 @@ return packer.startup(function(use)
 
   -- Visual enhance
   use { "nvim-focus/focus.nvim" }
-
+-- lazy.nvim
+  use ({
+  "folke/noice.nvim",
+  event = "BufReadPre",
+  requires = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --q   If not available, we use `mini` as the fallback
+    "rcarriga/nvim-notify",
+    }
+})
+  use {"j-hui/fidget.nvim"}
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

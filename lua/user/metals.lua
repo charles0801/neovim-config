@@ -8,7 +8,33 @@ local api = vim.api
 -- Autocmd that will actually be in charging of starting the whole thing
 local nvim_metals_group = api.nvim_create_augroup("nvim-metals", { clear = true })
 
+local function metals_status_handler(_, status, ctx)
+  -- https://github.com/scalameta/nvim-metals/blob/main/lua/metals/status.lua#L36-L50
+  local val = {}
+  if status.hide then
+    val = {kind = "end"}
+  elseif status.text then
+    val = {kind = "begin", message = status.text}
+  else
+    return
+  end
+  local info = {client_id = ctx.client_id}
+  local msg = {token = "metals", value = val}
+  -- call fidget progress handler
+  vim.lsp.handlers["$/progress"](nil, msg, info)
+end
+
+local handlers = {}
+handlers['metals/status'] = metals_status_handler
+
 metals_config.init_options.statusBarProvider = "on"
+metals_config.handlers = handlers
+
+metals_config.settings = {
+  showImplicitArguments = true,
+  enableSemanticHighlighting = true,
+  showInferredType = true
+}
 
 
 local function lsp_keymaps(bufnr)

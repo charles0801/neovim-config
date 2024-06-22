@@ -29,14 +29,16 @@ local options = {
   relativenumber = true,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
 
-  signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
+  signcolumn = "yes:1",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                             -- display lines as one long line
   linebreak = true,                        -- companion to wrap, don't split words
   scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
 --  guifont = "monospace:h21",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
-  spelllang = "en_us"
+  spelllang = "en_au",
+  autowriteall = true,                     -- Auto save all files
+  autoread = true                          -- Auto read files when changed outside of neovim
 }
 
 for k, v in pairs(options) do
