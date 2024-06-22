@@ -102,6 +102,7 @@ local schemas = {
     fileMatch = {
       "*.cf.json",
       "cloudformation.json",
+      "template.json"
     },
     url = "https://raw.githubusercontent.com/awslabs/goformation/v5.2.9/schema/cloudformation.schema.json",
   },

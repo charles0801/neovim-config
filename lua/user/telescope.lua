@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
+local builtin = require "telescope.builtin"
 
 telescope.setup {
   defaults = {
@@ -66,6 +67,7 @@ telescope.setup {
         ["<Up>"] = actions.move_selection_previous,
         ["gg"] = actions.move_to_top,
         ["G"] = actions.move_to_bottom,
+        ["gd"] = builtin.lsp_definitions,
 
         ["<C-u>"] = actions.preview_scrolling_up,
         ["<C-d>"] = actions.preview_scrolling_down,

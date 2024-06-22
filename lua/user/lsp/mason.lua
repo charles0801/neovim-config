@@ -10,7 +10,8 @@ local servers = {
 	"yamlls",
   "tsserver",
   -- "ruby_ls"
-  "solargraph"
+  "solargraph",
+  "perlnavigator"
 }
 
 local settings = {

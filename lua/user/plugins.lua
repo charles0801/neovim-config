@@ -62,7 +62,14 @@ return packer.startup(function(use)
   use { "lunarvim/darkplus.nvim" }
 
 	-- Cmp 
-  use { "hrsh7th/nvim-cmp" } -- The completion plugin
+  use { "hrsh7th/nvim-cmp",
+        requires = {
+          { "hrsh7th/cmp-nvim-lsp"},
+          { "hrsh7th/cmp-vsnip"},
+          { "hrsh7th/vim-vsnip"},
+        }
+
+        } -- The completion plugin
   use { "hrsh7th/cmp-buffer" } -- buffer completions
   use { "hrsh7th/cmp-path" } -- path completions
 	use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
@@ -88,7 +95,7 @@ return packer.startup(function(use)
 	use { "neovim/nvim-lspconfig" } -- enable LSP
   use { "williamboman/mason.nvim"} -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim" }
-	use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+	use { "nvimtools/null-ls.nvim" } -- for formatters and linters
   use { "RRethy/vim-illuminate" }
   use { "nvimdev/lspsaga.nvim",
       after = 'nvim-lspconfig'
@@ -117,6 +124,9 @@ return packer.startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   use { "catppuccin/nvim", as = "catppuccin" }
+
+  -- Visual enhance
+  use { "nvim-focus/focus.nvim" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
