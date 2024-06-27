@@ -59,15 +59,15 @@ return {
 	{ "L3MON4D3/LuaSnip" }, --snippet engine
 	{ "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
-	-- LSP
+	-- LSP and debugger
 	{ "neovim/nvim-lspconfig" }, -- enable LSP
+	{ "mfussenegger/nvim-dap" }, -- debugger
 	{ "williamboman/mason.nvim" }, -- simple to use language server installer
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "nvimtools/none-ls.nvim" }, -- for formatters and linters
 	{ "RRethy/vim-illuminate" },
-	{ "nvimdev/lspsaga.nvim", after = "nvim-lspconfig" },
-	{ "scalameta/nvim-metals", dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } },
-
+	{ "scalameta/nvim-metals", dependencies = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } }, -- scala LSP
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }, -- debugger ui
 	-- Telescope
 	{ "nvim-telescope/telescope.nvim" },
 	{ "LinArcX/telescope-env.nvim" },
@@ -129,4 +129,6 @@ return {
 		},
 	},
 	{ "chentoast/marks.nvim" },
+	-- hop, easy motion
+	{ "hadronized/hop.nvim" },
 }

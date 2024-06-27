@@ -34,4 +34,5 @@ else
 	require("user.copilot")
   require("user.copilot-chat")
 	require("user.fidget")
+  require("user.hop")
 end
