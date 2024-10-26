@@ -4,7 +4,6 @@ if vim.g.vscode then
 else
 	require("user.options")
 	require("user.keymaps")
-	-- require "user.plugins"
 	require("user.lazy")
 	require("user.colorscheme")
 	require("user.noice")

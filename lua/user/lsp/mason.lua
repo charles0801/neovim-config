@@ -9,7 +9,7 @@ local servers = {
 	-- "bashls",
 	"jsonls",
 	"yamlls",
-  "tsserver",
+  "ts_ls",
   -- "ruby_ls"
   "solargraph",
   "kotlin_language_server",
