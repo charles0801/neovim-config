@@ -2,19 +2,19 @@ local servers = {
 	"lua_ls",
 	-- "cssls",
 	-- "html",
-	"tsserver",
-  -- python
+	-- python
 	"pyright",
-  "pylsp",
+	"pylsp",
 	-- "bashls",
 	"jsonls",
 	"yamlls",
-  "ts_ls",
-  -- "ruby_ls"
-  "solargraph",
-  "kotlin_language_server",
-  -- "perlnavigator",
-  "vimls"
+	"ts_ls",
+	"prettierd",
+	-- "ruby_ls"
+	--"solargraph",
+	"kotlin_language_server",
+	-- "perlnavigator",
+	"vimls",
 }
 
 local settings = {
@@ -28,13 +28,13 @@ local settings = {
 	},
 	log_level = vim.log.levels.INFO,
 	max_concurrent_installers = 4,
-  providers = {
-    "mason.providers.client",
-    "mason.providers.registry-api" -- This is the default provider. You can still include it here if you want, as a fallback to the client provider.
-  },
-  registries = {
-      "github:mason-org/mason-registry",
-  }
+	providers = {
+		"mason.providers.client",
+		"mason.providers.registry-api", -- This is the default provider. You can still include it here if you want, as a fallback to the client provider.
+	},
+	registries = {
+		"github:mason-org/mason-registry",
+	},
 }
 
 require("mason").setup(settings)
