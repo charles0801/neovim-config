@@ -9,10 +9,10 @@ local servers = {
 	"jsonls",
 	"yamlls",
 	"ts_ls",
-	"prettierd",
 	-- "ruby_ls"
 	--"solargraph",
 	"kotlin_language_server",
+	"prismals",
 	-- "perlnavigator",
 	"vimls",
 }
